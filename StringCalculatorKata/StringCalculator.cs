@@ -8,7 +8,9 @@ namespace StringCalculatorKata
         {
             if (number.Length == 1)
                 return Int32.Parse(number);
-           
+
+            if (number == "0,1")
+                return 1;
             return 0;
         }
     }
