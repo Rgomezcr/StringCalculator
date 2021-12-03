@@ -146,7 +146,7 @@ namespace StringCalculatorKata.Tests
         } 
         
         [Fact]
-        public void CalculateSumForZeroAndthirteen()
+        public void CalculateSumForZeroAndThirteen()
         {
             StringCalculator stringCalculator = new ();
             
