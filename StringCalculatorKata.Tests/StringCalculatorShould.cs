@@ -104,5 +104,16 @@ namespace StringCalculatorKata.Tests
             
             Assert.Equal(4, actual);
         } 
+        
+        [Fact]
+        public void CalculateSumForZeroAndFive()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("0,5");
+            
+            Assert.Equal(5, actual);
+        } 
+        
     }
 }
