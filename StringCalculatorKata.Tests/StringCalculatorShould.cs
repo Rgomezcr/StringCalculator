@@ -24,5 +24,15 @@ namespace StringCalculatorKata.Tests
             
             Assert.Equal(1, actual);
         } 
+        
+        [Fact]
+        public void CalculateSumForTwo()
+        {
+            StringCalculator stringCalculator = new();
+            
+            int actual = stringCalculator.Add("2");
+            
+            Assert.Equal(2, actual);
+        } 
     }
 }
