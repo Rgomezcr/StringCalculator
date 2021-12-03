@@ -55,5 +55,15 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(4, actual);
         } 
         
+        [Fact]
+        public void CalculateSumForFive()
+        {
+            StringCalculator stringCalculator = new();
+            
+            int actual = stringCalculator.Add("5");
+            
+            Assert.Equal(5, actual);
+        } 
+        
     }
 }
