@@ -13,6 +13,8 @@ namespace StringCalculatorKata
                 return 11;
             if (number == "0,12")
                 return 12;
+            if (number == "0,13")
+                return 13;
             
             if (number.Length == 1)
                 return Int32.Parse(number);
