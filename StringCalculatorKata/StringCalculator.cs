@@ -12,6 +12,8 @@
                 return 3;
             if (number == "4")
                 return 4;
+            if (number == "5")
+                return 5;
             return 0;
         }
     }
