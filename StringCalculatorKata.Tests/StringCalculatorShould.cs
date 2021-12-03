@@ -45,5 +45,15 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(3, actual);
         } 
         
+        [Fact]
+        public void CalculateSumForFour()
+        {
+            StringCalculator stringCalculator = new();
+            
+            int actual = stringCalculator.Add("4");
+            
+            Assert.Equal(4, actual);
+        } 
+        
     }
 }
