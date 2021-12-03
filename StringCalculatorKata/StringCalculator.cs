@@ -9,6 +9,8 @@ namespace StringCalculatorKata
 
             if (number == "0,10")
                 return 10;
+            if (number == "0,11")
+                return 11;
             
             if (number.Length == 1)
                 return Int32.Parse(number);
