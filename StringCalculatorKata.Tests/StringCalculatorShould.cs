@@ -8,7 +8,7 @@ namespace StringCalculatorKata.Tests
         [Fact]
         public void ReturnZeroForEmptyString()
         {
-            StringCalculator stringCalculator = new();
+            StringCalculator stringCalculator = new ();
             
             int actual = stringCalculator.Add("");
             
@@ -18,7 +18,7 @@ namespace StringCalculatorKata.Tests
         [Fact]
         public void CalculateSumForOne()
         {
-            StringCalculator stringCalculator = new();
+            StringCalculator stringCalculator = new ();
             
             int actual = stringCalculator.Add("1");
             
@@ -28,7 +28,7 @@ namespace StringCalculatorKata.Tests
         [Fact]
         public void CalculateSumForTwo()
         {
-            StringCalculator stringCalculator = new();
+            StringCalculator stringCalculator = new ();
             
             int actual = stringCalculator.Add("2");
             
@@ -38,7 +38,7 @@ namespace StringCalculatorKata.Tests
         [Fact]
         public void CalculateSumForThree()
         {
-            StringCalculator stringCalculator = new();
+            StringCalculator stringCalculator = new ();
             
             int actual = stringCalculator.Add("3");
             
@@ -48,7 +48,7 @@ namespace StringCalculatorKata.Tests
         [Fact]
         public void CalculateSumForFour()
         {
-            StringCalculator stringCalculator = new();
+            StringCalculator stringCalculator = new ();
             
             int actual = stringCalculator.Add("4");
             
@@ -58,12 +58,21 @@ namespace StringCalculatorKata.Tests
         [Fact]
         public void CalculateSumForFive()
         {
-            StringCalculator stringCalculator = new();
+            StringCalculator stringCalculator = new ();
             
             int actual = stringCalculator.Add("5");
             
             Assert.Equal(5, actual);
+        }
+
+        [Fact]
+        public void CalculateSumForZeroAndOne()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("0,1");
+            
+            Assert.Equal(1, actual);
         } 
-        
     }
 }
