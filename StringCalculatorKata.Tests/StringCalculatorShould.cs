@@ -6,8 +6,11 @@ namespace StringCalculatorKata.Tests
     public class StringCalculatorShould
     {
         [Fact]
-        public void Test1()
+        public void ReturnZeroForEmptyString()
         {
+            StringCalculator stringCalculator = new();
+            int actual = stringCalculator.add("");
+            Assert.Equal(0, actual);
         }
     }
 }
