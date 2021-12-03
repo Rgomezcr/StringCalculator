@@ -33,6 +33,17 @@ namespace StringCalculatorKata.Tests
             int actual = stringCalculator.Add("2");
             
             Assert.Equal(2, actual);
+        }
+        
+        [Fact]
+        public void CalculateSumForThree()
+        {
+            StringCalculator stringCalculator = new();
+            
+            int actual = stringCalculator.Add("3");
+            
+            Assert.Equal(3, actual);
         } 
+        
     }
 }
