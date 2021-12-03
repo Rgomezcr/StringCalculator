@@ -9,8 +9,9 @@ namespace StringCalculatorKata.Tests
         public void ReturnZeroForEmptyString()
         {
             StringCalculator stringCalculator = new();
-            int actual = stringCalculator.add("");
+            int actual = stringCalculator.Add("");
             Assert.Equal(0, actual);
         }
+        
     }
 }
