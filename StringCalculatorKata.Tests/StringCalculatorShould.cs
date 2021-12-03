@@ -113,7 +113,16 @@ namespace StringCalculatorKata.Tests
             int actual = stringCalculator.Add("0,5");
             
             Assert.Equal(5, actual);
+        }
+
+        [Fact]
+        public void CalculateSumForZeroAndTen()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("0,10");
+            
+            Assert.Equal(10, actual);
         } 
-        
     }
 }
