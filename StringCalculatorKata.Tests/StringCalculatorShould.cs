@@ -74,5 +74,15 @@ namespace StringCalculatorKata.Tests
             
             Assert.Equal(1, actual);
         } 
+        
+        [Fact]
+        public void CalculateSumForZeroAndTwo()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("0,2");
+            
+            Assert.Equal(2, actual);
+        } 
     }
 }
