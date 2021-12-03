@@ -144,5 +144,15 @@ namespace StringCalculatorKata.Tests
             
             Assert.Equal(12, actual);
         } 
+        
+        [Fact]
+        public void CalculateSumForZeroAndthirteen()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("0,13");
+            
+            Assert.Equal(13, actual);
+        } 
     }
 }
