@@ -7,15 +7,6 @@ namespace StringCalculatorKata
         public int Add(string number)
         {
 
-            if (number == "0,10")
-                return 10;
-            if (number == "0,11")
-                return 11;
-            if (number == "0,12")
-                return 12;
-            if (number == "0,13")
-                return 13;
-            
             if (number.Length == 1)
                 return Int32.Parse(number);
 
@@ -23,8 +14,12 @@ namespace StringCalculatorKata
             {
                 return Int32.Parse(number.Substring(2, 1));
             }
-
             
+            if (number.Length == 4)
+            {
+                return Int32.Parse(number.Substring(2, 2));
+            }
+   
             return 0;
         }
     }
