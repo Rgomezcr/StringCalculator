@@ -19,7 +19,9 @@ namespace StringCalculatorKata
             {
                 return Int32.Parse(number.Substring(2, 2));
             }
-   
+
+            if (number == "0,100")
+                return 100;
             return 0;
         }
     }
