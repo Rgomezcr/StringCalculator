@@ -20,12 +20,11 @@ namespace StringCalculatorKata
                 return Int32.Parse(number.Substring(2, 2));
             }
 
-            if (number == "0,100")
-                return 100;
-            if (number == "0,101")
-                return 101;
-            if (number == "0,102")
-                return 102;
+            if (number.Length == 5)
+            {
+                return Int32.Parse(number.Substring(2, 3));
+            }
+            
             return 0;
         }
     }
