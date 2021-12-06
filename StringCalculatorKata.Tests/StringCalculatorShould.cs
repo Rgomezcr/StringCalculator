@@ -165,5 +165,15 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(100, actual);
         } 
         
+        [Fact]
+        public void CalculateSumForZeroAndOneHundredOne()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("0,101");
+            
+            Assert.Equal(101, actual);
+        } 
+        
     }
 }
