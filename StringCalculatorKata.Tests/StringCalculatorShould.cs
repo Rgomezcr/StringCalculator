@@ -65,124 +65,23 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(5, actual);
         }
 
-        [Fact]
-        public void CalculateSumForZeroAndOne()
+        [Theory]
+        [InlineData("0,1", 1)]
+        [InlineData("0,2", 2)]
+        [InlineData("0,3", 3)]
+        [InlineData("0,10", 10)]
+        [InlineData("0,11", 11)]
+        [InlineData("0,12", 12)]
+        [InlineData("0,100", 100)]
+        [InlineData("0,101", 101)]
+        [InlineData("0,102", 102)]
+        public void CalculateSumForZeroAndNumber(string numbers, int expected)
         {
             StringCalculator stringCalculator = new ();
             
-            int actual = stringCalculator.Add("0,1");
+            int actual = stringCalculator.Add(numbers);
             
-            Assert.Equal(1, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndTwo()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,2");
-            
-            Assert.Equal(2, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndThree()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,3");
-            
-            Assert.Equal(3, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndFour()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,4");
-            
-            Assert.Equal(4, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndFive()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,5");
-            
-            Assert.Equal(5, actual);
-        }
-
-        [Fact]
-        public void CalculateSumForZeroAndTen()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,10");
-            
-            Assert.Equal(10, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndEleven()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,11");
-            
-            Assert.Equal(11, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndTwelve()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,12");
-            
-            Assert.Equal(12, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndThirteen()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,13");
-            
-            Assert.Equal(13, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndOneHundred()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,100");
-            
-            Assert.Equal(100, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndOneHundredOne()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,101");
-            
-            Assert.Equal(101, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForZeroAndOneHundredTwo()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("0,102");
-            
-            Assert.Equal(102, actual);
+            Assert.Equal(expected, actual);
         } 
         
     }
