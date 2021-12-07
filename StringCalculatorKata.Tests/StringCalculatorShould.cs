@@ -124,5 +124,15 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(3, actual);
         }
         
+        [Fact]
+        public void CalculateSumForTenAndNumber()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("10,0");
+            
+            Assert.Equal(10, actual);
+        }
+        
     }
 }
