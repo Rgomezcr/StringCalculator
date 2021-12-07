@@ -84,5 +84,14 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(expected, actual);
         } 
         
+        [Fact]
+        public void CalculateSumForOneAndNumber()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("1,0");
+            
+            Assert.Equal(1, actual);
+        }
     }
 }
