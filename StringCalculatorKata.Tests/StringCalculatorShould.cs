@@ -144,5 +144,15 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(11, actual);
         }
         
+        [Fact]
+        public void CalculateSumForTwelveAndNumber()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("12,0");
+            
+            Assert.Equal(12, actual);
+        }
+        
     }
 }
