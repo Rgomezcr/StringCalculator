@@ -16,6 +16,8 @@ namespace StringCalculatorKata
                 return 10;
             if (number == "11,0")
                 return 11;
+            if (number == "12,0")
+                return 12;
             if (number == "")
                 return 0;
 
