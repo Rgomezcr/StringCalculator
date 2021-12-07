@@ -104,5 +104,15 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(2, actual);
         }
         
+        [Fact]
+        public void CalculateSumForThreeAndNumber()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("3,0");
+            
+            Assert.Equal(3, actual);
+        }
+        
     }
 }
