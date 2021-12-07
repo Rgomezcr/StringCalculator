@@ -65,6 +65,16 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(5, actual);
         }
 
+        [Fact]
+        public void CalculateSumForTen()
+        {
+            StringCalculator stringCalculator = new ();
+            
+            int actual = stringCalculator.Add("10");
+            
+            Assert.Equal(10, actual);
+        } 
+        
         [Theory]
         [InlineData("0,1", 1)]
         [InlineData("0,2", 2)]
