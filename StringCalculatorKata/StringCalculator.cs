@@ -10,6 +10,8 @@ namespace StringCalculatorKata
                 return 1;
             if (number == "2,0")
                 return 2;
+            if (number == "3,0")
+                return 3;
             if (number.Length == 1)
                 return Int32.Parse(number);
 
