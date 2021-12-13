@@ -11,7 +11,7 @@ namespace StringCalculatorKata
                 return 0;
             if (!number.Contains(',')) return Int32.Parse(number);
 
-            var numbers = number.Split(',');
+            var numbers = number.Split(new char[] { ',', '\n' }, StringSplitOptions.RemoveEmptyEntries);
 
             return numbers.Sum(numberString => Int32.Parse(numberString));
         }
