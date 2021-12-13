@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace StringCalculatorKata
 {
@@ -9,26 +10,10 @@ namespace StringCalculatorKata
             if (string.IsNullOrEmpty(number))
                 return 0;
             if (!number.Contains(',')) return Int32.Parse(number);
-
-            if (number == "1,1,1")
-            {
-                return 3;
-            }
-
-            if (number == "2,1,1")
-            {
-                return 4;
-            }
             
-            if (number == "3,1,1")
-            {
-                return 5;
-            }
+            var numbers = number.Split(',');
 
-            int commaPosition = number.IndexOf(',');
-            string firstNumber = number.Substring(0, commaPosition);
-            string secondNumber = number.Substring(commaPosition + 1);
-            return Int32.Parse(firstNumber) + Int32.Parse(secondNumber);
+            return numbers.Sum(numberString => Int32.Parse(numberString));
         }
     }
 }
