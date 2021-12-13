@@ -69,6 +69,16 @@ namespace StringCalculatorKata.Tests
             
             Assert.Equal(expected, actual);
         }
+
+        [Fact]
+        public void CalculateSumForOneAndTwoNumbersMore()
+        {
+            StringCalculator stringCalculator = new();
+            
+            int actual = stringCalculator.Add("1,1,1");
+            
+            Assert.Equal(3, actual);
+        } 
         
     }
 }
