@@ -6,25 +6,13 @@ namespace StringCalculatorKata
     {
         public int Add(string number)
         {
-            if (number == "1,0")
-                return 1;
-            if (number == "2,0")
-                return 2;
-            if (number == "3,0")
-                return 3;
-            if (number == "10,0")
-                return 10;
-            if (number == "11,0")
-                return 11;
-            if (number == "12,0")
-                return 12;
-            if (number == "")
+            if (string.IsNullOrEmpty(number))
                 return 0;
-
-            if(number.Length > 2)
-                return Int32.Parse(number.Substring(2, number.Length - 2));
-            
-            return Int32.Parse(number);;
+            if (!number.Contains(',')) return Int32.Parse(number);
+            int commaPosition = number.IndexOf(',');
+            string firstNumber = number.Substring(0, commaPosition);
+            string secondNumber = number.Substring(commaPosition + 1);
+            return Int32.Parse(firstNumber) + Int32.Parse(secondNumber);
         }
     }
 }

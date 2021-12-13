@@ -92,66 +92,26 @@ namespace StringCalculatorKata.Tests
             int actual = stringCalculator.Add(numbers);
             
             Assert.Equal(expected, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForOneAndNumber()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("1,0");
-            
-            Assert.Equal(1, actual);
         }
-        
-        [Fact]
-        public void CalculateSumForTwoAndNumber()
+
+        [Theory]
+        [InlineData("1,0", 1)]
+        [InlineData("2,0", 2)]
+        [InlineData("3,0", 3)]
+        [InlineData("1,1", 2)]
+        [InlineData("1,2", 3)]
+        [InlineData("2,2", 4)]
+        [InlineData("10,1", 11)]
+        [InlineData("2,10", 12)]
+        [InlineData("10,10", 20)]
+        [InlineData("11,11", 22)]
+        public void CalculateSumForTwoNumbers(string input, int expected)
         {
             StringCalculator stringCalculator = new ();
             
-            int actual = stringCalculator.Add("2,0");
+            int actual = stringCalculator.Add(input);
             
-            Assert.Equal(2, actual);
-        }
-        
-        [Fact]
-        public void CalculateSumForThreeAndNumber()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("3,0");
-            
-            Assert.Equal(3, actual);
-        }
-        
-        [Fact]
-        public void CalculateSumForTenAndNumber()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("10,0");
-            
-            Assert.Equal(10, actual);
-        }
-        
-        [Fact]
-        public void CalculateSumForElvenAndNumber()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("11,0");
-            
-            Assert.Equal(11, actual);
-        }
-        
-        [Fact]
-        public void CalculateSumForTwelveAndNumber()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("12,0");
-            
-            Assert.Equal(12, actual);
+            Assert.Equal(expected, actual);
         }
         
     }
