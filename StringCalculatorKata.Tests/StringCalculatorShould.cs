@@ -80,5 +80,15 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(3, actual);
         } 
         
+        [Fact]
+        public void CalculateSumForTwoAndTwoNumbersMore()
+        {
+            StringCalculator stringCalculator = new();
+            
+            int actual = stringCalculator.Add("2,1,1");
+            
+            Assert.Equal(4, actual);
+        } 
+        
     }
 }
