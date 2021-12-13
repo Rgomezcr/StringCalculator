@@ -100,5 +100,15 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(5, actual);
         } 
         
+        [Fact]
+        public void CalculateSumUsingMultiplesDelimiters()
+        {
+            StringCalculator stringCalculator = new();
+            
+            int actual = stringCalculator.Add("1\n2,3");
+            
+            Assert.Equal(6, actual);
+        } 
+        
     }
 }
