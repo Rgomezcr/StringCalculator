@@ -15,64 +15,20 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(0, actual);
         }
 
-        [Fact]
-        public void CalculateSumForOne()
+        [Theory]
+        [InlineData("1",1)]
+        [InlineData("2",2)]
+        [InlineData("3",3)]
+        [InlineData("4",4)]
+        [InlineData("10",10)]
+        [InlineData("100",100)]
+        public void CalculateSumForOneNumber(string input, int expected)
         {
             StringCalculator stringCalculator = new ();
             
-            int actual = stringCalculator.Add("1");
+            int actual = stringCalculator.Add(input);
             
-            Assert.Equal(1, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForTwo()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("2");
-            
-            Assert.Equal(2, actual);
-        }
-        
-        [Fact]
-        public void CalculateSumForThree()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("3");
-            
-            Assert.Equal(3, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForFour()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("4");
-            
-            Assert.Equal(4, actual);
-        } 
-        
-        [Fact]
-        public void CalculateSumForFive()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("5");
-            
-            Assert.Equal(5, actual);
-        }
-
-        [Fact]
-        public void CalculateSumForTen()
-        {
-            StringCalculator stringCalculator = new ();
-            
-            int actual = stringCalculator.Add("10");
-            
-            Assert.Equal(10, actual);
+            Assert.Equal(expected, actual);
         } 
         
         [Theory]
