@@ -130,5 +130,15 @@ namespace StringCalculatorKata.Tests
             Assert.Equal(3, actual);
         } 
         
+        [Fact]
+        public void ReturnThreeForOneAndTwoWhenUseAsteriskAsDelimiter()
+        {
+            StringCalculator stringCalculator = new StringCalculator();
+            
+            int actual = stringCalculator.Add("//*\n1*2");
+            
+            Assert.Equal(3, actual);
+        } 
+        
     }
 }
