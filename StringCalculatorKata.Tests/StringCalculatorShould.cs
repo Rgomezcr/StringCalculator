@@ -108,6 +108,16 @@ namespace StringCalculatorKata.Tests
             int actual = stringCalculator.Add("1\n2,3");
             
             Assert.Equal(6, actual);
+        }
+
+        [Fact]
+        public void ReturnThreeForOneAndTwoWhenUseCommaAsDelimiter()
+        {
+            StringCalculator stringCalculator = new StringCalculator();
+            
+            int actual = stringCalculator.Add("//,\n1,2");
+            
+            Assert.Equal(3, actual);
         } 
         
     }
