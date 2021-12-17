@@ -118,6 +118,16 @@ namespace StringCalculatorKata.Tests
             int actual = stringCalculator.Add("//,\n1,2");
             
             Assert.Equal(3, actual);
+        }
+        
+        [Fact]
+        public void ReturnThreeForOneAndTwoWhenUseSemicolonAsDelimiter()
+        {
+            StringCalculator stringCalculator = new StringCalculator();
+            
+            int actual = stringCalculator.Add("//;\n1;2");
+            
+            Assert.Equal(3, actual);
         } 
         
     }
