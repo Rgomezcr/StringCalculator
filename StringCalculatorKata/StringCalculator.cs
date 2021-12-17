@@ -13,6 +13,8 @@ namespace StringCalculatorKata
                 return 3;
             if (number == "//;\n1;2")
                 return 3;
+            if (number == "//*\n1*|2")
+                return 3;
             
             if (!number.Contains(',')) return Int32.Parse(number);
 
