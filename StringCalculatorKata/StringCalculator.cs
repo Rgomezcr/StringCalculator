@@ -9,12 +9,13 @@ namespace StringCalculatorKata
         {
             if (string.IsNullOrEmpty(number))
                 return 0;
-            if (number == "//,\n1,2")
-                return 3;
-            if (number == "//;\n1;2")
-                return 3;
-            if (number == "//*\n1*|2")
-                return 3;
+            if(number.StartsWith("//"))    
+            {
+                string delimiter = number.Substring(2, 1);
+                string operationNumbers = number.Substring(4, number.Length - 4);
+                var numbersOperation = operationNumbers.Split(delimiter, StringSplitOptions.RemoveEmptyEntries);
+                return numbersOperation.Sum(stringNumber => Int32.Parse(stringNumber));
+            }
             
             if (!number.Contains(',')) return Int32.Parse(number);
 
