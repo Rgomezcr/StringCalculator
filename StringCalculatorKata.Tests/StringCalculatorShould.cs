@@ -138,7 +138,17 @@ namespace StringCalculatorKata.Tests
             int actual = stringCalculator.Add("//*\n1*2");
             
             Assert.Equal(3, actual);
-        } 
-        
+        }
+
+        [Fact]
+        public void FailWhenCallingAddWithNegativeNumber()
+        {
+            StringCalculator stringCalculator = new StringCalculator();
+            
+            int actual = stringCalculator.Add("//*\n-1*2");
+            
+            Assert.Throws<ArgumentOutOfRangeException>(() => actual);
+        }         
+
     }
 }
