@@ -144,10 +144,8 @@ namespace StringCalculatorKata.Tests
         public void FailWhenCallingAddWithNegativeNumber()
         {
             StringCalculator stringCalculator = new StringCalculator();
-            
-            int actual = stringCalculator.Add("//*\n-1*2");
-            
-            Assert.Throws<ArgumentOutOfRangeException>(() => actual);
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => stringCalculator.Add("//*\n-1*2"));
         }         
 
     }
