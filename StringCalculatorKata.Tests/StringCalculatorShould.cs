@@ -146,7 +146,15 @@ namespace StringCalculatorKata.Tests
             StringCalculator stringCalculator = new StringCalculator();
 
             Assert.Throws<ArgumentOutOfRangeException>(() => stringCalculator.Add("//*\n-1*2"));
-        }         
+        }
+        
+        [Fact]
+        public void FailWhenCallingAddWithNegativeNumberWithoutDelimiter()
+        {
+            StringCalculator stringCalculator = new StringCalculator();
+
+            Assert.Throws<ArgumentOutOfRangeException>(() => stringCalculator.Add("-13"));
+        } 
 
     }
 }
